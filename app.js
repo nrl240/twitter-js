@@ -1,8 +1,10 @@
 const express = require( 'express' );
 const nunjucks = require( 'nunjucks' );
+const routes = require('./routes');
 const app = express(); // creates an instance of an express application
 const people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
 
+app.use('/', routes);
 
 app.use(function (req, res, next) {
   console.log('Time: ', Date.now());
@@ -33,3 +35,9 @@ nunjucks.configure('views'); // point nunjucks to the proper directory for templ
 
 // const people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
 // res.render( 'index', {title: 'Hall of Fame', people: people} );
+
+// An Initial Route
+
+// app.get('../public/stylesheets/', function (req, res) {
+//   res.sendFile('/stylesheets/style.css');
+// });

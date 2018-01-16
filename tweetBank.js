@@ -41,3 +41,5 @@ for (let i = 0; i < 10; i++) {
 // add('Noelle Laureano', 'testingggggggg');
 // // console.log(data);
 // console.log(find({name: 'Noelle Laureano'}));
+
+console.log(data);
