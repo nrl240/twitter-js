@@ -1,10 +1,11 @@
 // Setting up a tweetBank.js Module
 const _ = require('lodash');
 const data = [];
+let tweetId = 0;
 
 // Defining the tweetBank.js Functions
 function add (name, content) {
-  data.push({ name: name, content: content });
+  data.push({ name: name, content: content, id: tweetId++ });
 }
 
 function list () {
